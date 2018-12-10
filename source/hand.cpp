@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <gsl/gsl_rng.h>
-#include <iostream>
 #include <stdlib.h>
 #include <ctime>
 #include <sys/types.h>
@@ -18,7 +17,6 @@ int main(int argc, char** argv)
 	gsl_rng_set(_gsl_rng,result); 
 	double rand = gsl_rng_uniform(_gsl_rng) * 100.0;
 	gsl_rng_free(_gsl_rng);
-	cout << p << (double)p << rand;
 	if(rand < (double)p)
 		return 1;
 	else
